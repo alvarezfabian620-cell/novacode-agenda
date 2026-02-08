@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCode Agenda - Dashboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Inicio</a></li>
+                <li><a href="crear-evento.html">Crear Evento</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="#" onclick="logout(); window.location.href='../index.html'">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Mis Eventos</h2>
+        <div id="eventList">
+            <p>Cargando eventos...</p>
+            <!-- Eventos se cargarán dinámicamente aquí -->
+        </div>
+        <button onclick="window.location.href='crear-evento.html'">Nuevo Evento</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 NovaCode Agenda</p>
+    </footer>
+    <script src="../js/agenda.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script>
+        // Simulación de carga de eventos
+        document.addEventListener('DOMContentLoaded', () => {
+            const events = listEvents();
+            const eventList = document.getElementById('eventList');
+            if (events.length === 0) {
+                eventList.innerHTML = '<p>No hay eventos programados.</p>';
+            } else {
+                // Renderizar eventos
+            }
+        });
+    </script>
+</body>
+
+</html>
