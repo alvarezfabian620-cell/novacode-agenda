@@ -1,23 +1,67 @@
-# NovaCode Agenda
+# NovaCode Agenda - Royal Midnight Edition
 
-## Descripción
-NovaCode Agenda es una aplicación web para la gestión de eventos personales. Permite a los usuarios crear, editar y visualizar sus eventos en un dashboard intuitivo.
+Este proyecto es una aplicación de gestión de agenda desarrollada con **Laravel** (Backend) y **Angular** (Frontend), enfocada en una estética premium denominada "Royal Midnight" utilizando **Sass (SCSS)** únicamente (sin Tailwind).
 
-## Tecnologías Usadas
-- **HTML5**: Estructura semántica de las páginas.
-- **CSS3**: Estilos personalizados para una interfaz limpia y responsiva.
-- **JavaScript**: Lógica del cliente para validaciones, navegación y manejo de eventos.
+## Requisitos Previos
+
+- PHP 8.2+
+- Composer
+- Node.js & npm
+- Angular CLI (`npm install -g @angular/cli`)
 
 ## Estructura del Proyecto
-- `index.html`: Página de inicio / Login.
-- `pages/`: Contiene las vistas de la aplicación (Dashboard, Crear Evento, Editar Evento, Perfil).
-- `css/`: Contiene la hoja de estilos global (`styles.css`).
-- `js/`: Contiene los scripts de lógica (`auth.js`, `agenda.js`, `validations.js`, `navigation.js`).
 
-## Cómo ejecutar en localhost
-1. Clona o descarga este repositorio.
-2. Navega a la carpeta del proyecto `NovaCode-agenda`.
-3. Abre el archivo `index.html` en tu navegador web preferido (Chrome, Firefox, Edge, etc.).
-4. Navega a través de la aplicación.
+- `/backend`: API Laravel.
+- `/frontend`: Aplicación Angular SPA.
+- `/_backup`: Respaldo de archivos originales.
 
-*Nota: Este proyecto es un prototipo frontend y no requiere instalación de dependencias ni servidor backend.*
+## Instalación y Configuración
+
+### Backend (Laravel)
+
+1. Navega a la carpeta backend:
+   ```bash
+   cd backend
+   ```
+2. Instala las dependencias:
+   ```bash
+   composer install
+   ```
+3. Configura el archivo `.env` (ya configurado para SQLite por defecto).
+4. Ejecuta las migraciones y el seeder:
+   ```bash
+   php artisan migrate --force
+   php artisan db:seed --class=UserSeeder
+   ```
+5. Inicia el servidor:
+   ```bash
+   php artisan serve
+   ```
+
+### Frontend (Angular)
+
+1. Navega a la carpeta frontend:
+   ```bash
+   cd frontend
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Inicia el servidor de desarrollo:
+   ```bash
+   ng serve
+   ```
+
+## Credenciales de Acceso (Test)
+
+- **Email:** `admin@nova.com`
+- **Password:** `password123`
+
+## Tecnologías Utilizadas
+
+- **Backend:** Laravel 11/12 (Sanctum para Auth).
+- **Frontend:** Angular 19 (Standalone Components).
+- **Estilos:** Sass (SCSS) con arquitectura de variables personalizada.
+- **Iconos:** FontAwesome 6.
+- **Tipografía:** Inter (Google Fonts).

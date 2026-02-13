@@ -1,0 +1,36 @@
+<aside class="sidebar">
+    <div class="brand-section">
+        <div class="brand-content">
+            <div class="logo-box">
+                <i class="fas fa-receipt"></i>
+            </div>
+            <span>Nova<span class="highlight">Account</span></span>
+        </div>
+    </div>
+
+    <nav>
+        <a routerLink="/dashboard" routerLinkActive="active" class="nav-item">
+            <i class="fas fa-columns"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Agenda</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-users"></i>
+            <span>Clientes</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-building"></i>
+            <span>Proveedores</span>
+        </a>
+    </nav>
+
+    <div class="footer-section">
+        <button class="logout-btn" (click)="logout()">
+            <i class="fas fa-power-off"></i>
+            <span>Salir</span>
+        </button>
+    </div>
+</aside>
