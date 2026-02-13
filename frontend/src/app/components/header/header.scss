@@ -1,0 +1,161 @@
+@import '../../../variables';
+
+.header {
+    height: 100px;
+    background-color: rgba($bg, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba($white, 0.03);
+    padding: 0 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+
+    .left-side {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+
+        .menu-toggle {
+            background-color: $surface;
+            border: 1px solid rgba($white, 0.05);
+            color: $gold;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: $transition;
+
+            &:hover {
+                border-color: rgba($gold, 0.5);
+            }
+        }
+
+        .status-indicator {
+            .label {
+                font-size: 0.625rem;
+                font-weight: 900;
+                color: rgba($text, 0.5);
+                text-transform: uppercase;
+                letter-spacing: 0.4em;
+                margin-bottom: 0.25rem;
+            }
+
+            .status {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: $white;
+                font-style: italic;
+                text-transform: uppercase;
+
+                .dot {
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: $cyan;
+                    border-radius: 50%;
+                    box-shadow: 0 0 10px $cyan;
+                }
+            }
+        }
+    }
+
+    .right-side {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .search-box {
+            position: relative;
+
+            i {
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 0.75rem;
+                color: rgba($text, 0.4);
+            }
+
+            input {
+                background-color: rgba($white, 0.05);
+                border: 1px solid rgba($white, 0.1);
+                border-radius: 1.25rem;
+                padding: 0.75rem 1rem 0.75rem 2.5rem;
+                color: $white;
+                font-size: 0.625rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                width: 280px;
+                outline: none;
+                transition: $transition;
+
+                &:focus {
+                    border-color: rgba($gold, 0.3);
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 1.25rem;
+
+            .action-btn {
+                background-color: $surface;
+                border: 1px solid rgba($white, 0.05);
+                color: rgba($text, 0.5);
+                width: 3rem;
+                height: 3rem;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: $transition;
+
+                &.notifications {
+                    position: relative;
+                }
+
+                .badge {
+                    position: absolute;
+                    top: 0.75rem;
+                    right: 0.75rem;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: $gold;
+                    border-radius: 50%;
+                }
+
+                &:hover {
+                    color: $gold;
+                }
+            }
+        }
+
+        .user-avatar {
+            width: 3rem;
+            height: 3rem;
+            background-color: $surface;
+            border: 1px solid rgba($gold, 0.3);
+            border-radius: 1rem;
+            padding: 2px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.75rem;
+                object-fit: cover;
+            }
+        }
+    }
+}

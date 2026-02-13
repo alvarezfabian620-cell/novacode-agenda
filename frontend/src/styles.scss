@@ -1,0 +1,30 @@
+@import 'variables';
+
+body {
+    background-color: $bg;
+    color: $text;
+    font-family: $font-sans;
+    margin: 0;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.custom-scrollbar {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $surface;
+        border-radius: 10px;
+
+        &:hover {
+            background: $gold;
+        }
+    }
+}

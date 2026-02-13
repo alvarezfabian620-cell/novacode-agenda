@@ -1,0 +1,121 @@
+@import '../../../variables';
+
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    background-color: $bg;
+    border-right: 1px solid rgba($white, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: $transition;
+    z-index: 50;
+
+    .brand-section {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        flex-shrink: 0;
+
+        .brand-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .logo-box {
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: $gold;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 5px 15px rgba($gold, 0.2);
+
+                i {
+                    color: $bg;
+                }
+            }
+
+            span {
+                font-size: 1.25rem;
+                font-weight: 900;
+                color: $white;
+                text-transform: uppercase;
+                font-style: italic;
+                letter-spacing: -0.05em;
+
+                .highlight {
+                    color: $gold;
+                }
+            }
+        }
+    }
+
+    nav {
+        flex: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-radius: 1.25rem;
+            color: rgba($text, 0.5);
+            text-decoration: none;
+            transition: $transition;
+            font-size: 0.625rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+
+            i {
+                width: 1.5rem;
+                text-align: center;
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                color: $text;
+                background-color: rgba($white, 0.03);
+            }
+
+            &.active {
+                background-color: rgba($white, 0.05);
+                color: $white;
+                border-left: 3px solid $gold;
+            }
+        }
+    }
+
+    .footer-section {
+        padding: 2rem;
+        border-top: 1px solid rgba($white, 0.05);
+
+        .logout-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: none;
+            border: none;
+            color: rgba($text, 0.4);
+            font-size: 0.625rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            cursor: pointer;
+            transition: $transition;
+
+            i {
+                font-size: 1.125rem;
+            }
+
+            &:hover {
+                color: #fb7185; // rose-500
+            }
+        }
+    }
+}
